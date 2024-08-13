@@ -1,0 +1,4 @@
+#These are some files i do not post on git hub
+/package-lock.json
+/package.json
+/node_modules

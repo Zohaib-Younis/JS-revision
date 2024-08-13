@@ -70,3 +70,42 @@ console.log(x); // ReferenceError: x is not defined
 ### Best Practices
 Use const by default, unless you know the variable's value will need to change, in which case use let.
 This approach makes the code easier to understand and prevents accidental reassignment of variables.
+
+# JavaScript `var` Keyword
+
+## Introduction
+
+The `var` keyword in JavaScript is used to declare variables. It has been part of the language since its inception, but with the introduction of `let` and `const` in ES6 (ECMAScript 2015), `var` is now considered less favorable due to its unique behavior regarding scope, hoisting, and redeclaration.
+
+## Key Features
+
+### 1. Function Scope
+Variables declared with `var` are scoped to the function in which they are declared. If a variable is declared inside a function using `var`, it is accessible throughout the entire function.
+
+```javascript
+function example() {
+    var x = 10;
+    if (true) {
+        var x = 20;
+        console.log(x); // Outputs: 20
+    }
+    console.log(x); // Outputs: 20
+}
+example();
+
+#### 2.Hoisting
+
+Variables declared with var are hoisted to the top of their scope. This means that the declaration is moved to the top of its scope, but the assignment remains where it is. As a result, the variable can be accessed before it is actually assigned a value, which results in undefined.
+
+
+console.log(y); // Outputs: undefined
+var y = 5;
+console.log(y); // Outputs: 5
+
+##### 3.Redeclaration
+With var, you can redeclare a variable within the same scope without causing an error. This can lead to unintended behavior, especially in larger codebases.
+
+
+var z = 10;
+var z = 20;
+console.log(z); // Outputs: 20

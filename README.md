@@ -103,9 +103,9 @@ var y = 5;
 console.log(y); // Outputs: 5
 
 ##### 3.Redeclaration
-With var, you can redeclare a variable within the same scope without causing an error. This can lead to unintended behavior, especially in larger codebases.
 
 
+<br>
 <<<<<<< HEAD
 var z = 10;
 var z = 20;
@@ -156,5 +156,3 @@ console.log(arr);  // [1, 4, 5]<br>
 
 Slice array ka ek portion copy karne ke liye use hota hai bina original array ko change kiye.
 Splice array mein modification (add/remove) ke liye use hota hai aur original array ko change karta hai.
-=======
->>>>>>> 2e264298b465f28786c2aa0ee12d1a763461ea2a
